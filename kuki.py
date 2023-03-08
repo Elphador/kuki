@@ -2,10 +2,8 @@ from pyrogram import Client, filters, enums
 from pyrogram.errors import UserNotParticipant , FloodWait,InputUserDeactivated , UserIsBlocked , PeerIdInvalid
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultArticle 
 from  pymongo import MongoClient
-import asyncio 
-import requests,  json
+import asyncio , requests,  json
 from time import sleep 
-import kconfig
 from kconfig import HELP,headers 
 import datetime 
 print("123........")
