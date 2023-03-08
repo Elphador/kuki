@@ -11,20 +11,14 @@ import datetime
 print("123........")
 
 
-Token = '5772504388:AAEX0vjm-rx1sYdLU_qLpIS_RMqSvi5KANg'
-
-
-api_id =18802415 ; api_hash = "a8993f96404fd9a67de867586b3ddc92" ; bot_token = Token 
-
-mongodb = "mongodb+srv://sweetlovbbbb:x4hKLNhjqN3QHy2@cluster0.jhyldml.mongodb.net/?retryWrites=true&w=majority"
 
 "buttons"
-channel = InlineKeyboardButton("Channel🌴",url='https://t.me/cartx')
-group = InlineKeyboardButton("Group🪺",url='https://t.me/cartv')
-donate = InlineKeyboardButton("Donate VPS🦭",url="https://t.me/e_phador")
-feedback = InlineKeyboardButton("Subscribe Premium🍿",url='https://t.me/e_phador')
+channel = InlineKeyboardButton("Channel🌴",url='https://t.me/neuralp')
+group = InlineKeyboardButton("Group🪺",url='https://t.me/neuralg')
+donate = InlineKeyboardButton("Donate VPS🦭",url="https://t.me/neuralg")
+feedback = InlineKeyboardButton("Subscribe Premium🍿",url='https://t.me/neuralf')
 help = InlineKeyboardButton("Help📃",callback_data='help')
-mark = InlineKeyboardMarkup([[InlineKeyboardButton("🥬team cartx🌽",url = "https://t.me/cartx")]])   
+mark = InlineKeyboardMarkup([[InlineKeyboardButton("🥬team Neural🌽",url = "https://t.me/neuralp")]])   
 
 app = Client ("grabber",api_id=api_id,api_hash=api_hash, bot_token=bot_token)
 cli = MongoClient(mongodb); db = cli.database; cuser = db.cuser ; cadmin = db.cadmin
@@ -53,9 +47,9 @@ async def cast(bot,msg):
         except UserIsBlocked:
             block+=f"{user['userid']} : {user['name']} :  @{user['username']}\n"
         except InputUserDeactivated:
-            dec+=f"{user['userid']} : {user['name']} : {user['username']}"
+            dec+=f"{user['userid']} : {user['name']} : @{user['username']}"
         except PeerIdInvalid:
-            idinvalid+=f" {user['userid']} : {user['name']} : {user['username']}"
+            idinvalid+=f" {user['userid']} : {user['name']} : @{user['username']}"
         except FloodWait:
             await asyncio.sleep(e.x)     
    
@@ -69,7 +63,7 @@ async def  messe(bot,msg):
         text = msg.copy(msg.text)
         ruid = text.split(" ")[1]
         mesgt = text.replace('/msg',"").replace(ruid,'')
-        await bot.send_message(int(ruid), f"{mesgt}\n\n\n **cartx CEO**",reply_markup=mark) 
+        await bot.send_message(int(ruid), f"{mesgt}\n\n\n **Neural Programmers CEO**",reply_markup=mark) 
         await msg.reply("your message sent successfully")
         
     except Exception as error:
