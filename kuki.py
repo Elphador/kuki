@@ -4,9 +4,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQue
 from  pymongo import MongoClient
 import asyncio , requests,  json
 from time import sleep 
+from kconfig import HELP,headers,api_id,api_hash,mongodb,bot_token
+import kconfig
 import datetime 
 print("123........")
-
 
 
 
@@ -87,7 +88,7 @@ def force(bot , msg):
     cr.edit(f"**Current Force Join Set to {st}🦊**")
     
     
-@bot.on_message(filters.private & filters.command("set") )
+@bot.on_message(filters.private & filters.command("set"))
 def set(bot, msg):
     id = msg.text.replace("/set","")
     prp = msg.from_user.first_name 
