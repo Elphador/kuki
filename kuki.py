@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQue
 from  pymongo import MongoClient
 import asyncio , requests,  json
 from time import sleep 
-from kconfig import HELP,headers 
+from kconfig import HELP,headers ,api_id, api_hash, mongodb,  bot_token 
 import datetime 
 print("123........")
 
@@ -106,7 +106,7 @@ def bots(bot, msg):
         
     
     
-@bot.on_message(filters.private & filters.command("start")&filters.text)
+@bot.on_message(filters.private & filters.command("start"))
 async def start(bot, msg):
   
     name = msg.from_user.first_name 
