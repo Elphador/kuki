@@ -1,0 +1,8 @@
+{
+    "help": "**--Help--\n Kuki is your AI chat Bot friend Just Start conversation \n the premium Version of Kuki chatbot is Available for purchase ,it can include more features like Kuki learns from your everyday activity \n,she will never miss you(bot can have memory) , and you can train her well \nCommands\n/start Restarts the Bot \n/bots to get list of our bots made by cartx team\n/cast to Broadcast message for bot users , you should have to be an admin to use this feature you can require this in our group or using feedback command and promote your products via our bot \n/users to get how many users we have\n/msg send message for one specified user \n/admins to get list of admins of this bot**",
+    "start":"**Hello {} My name Is Kuki I'm an Ai Chat Bot , I'm here to waste my time talking with you**",
+    "sucess_admin":"Your message sent successfully.",
+    "status":"**we have {} users at this moment🦝**",
+    "force_text":"**Sorry I can't help you a lot on this, Join the channel before our meeting.**",
+    "Error_1":"Opps, forget button bug! report it via group. "
+}
