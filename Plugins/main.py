@@ -24,7 +24,7 @@ async def main(client,message):
     'client_name': 'uuiprod-un18e6d73c-user-439215',
     'id': 'true'
     }
-
+    await message.reply(message.text)
     resp = requests.post('https://icap.iconiq.ai/talk', headers=headers, data=data)
     json_resp = json.loads(resp.text)
     decoded_resp = json_resp['responses'][0]
