@@ -6,23 +6,16 @@ import requests
 import json
 
 headers = {
-
-    'Content-type': 'application/x-www-form-urlencoded',
-
-    'User-Agent': 'Mozilla/5.0 (Linux; Android 13; SM-M135FU) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36',
-
-    'Referer': 'https://chat.kuki.ai/chat',}
-
+    'User-Agent': 'Mozilla/5.0 (Linux; Android 13; SM-M135FU) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36',
+    'Referer': 'https://chat.kuki.ai/chat',
+}
 
 @bot.on_message(filters.private & filters.text)
 async def main(client,message):
     data = {
-    'input': message.text,
-    'botkey': 'icH-VVd4uNBhjUid30-xM9QhnvAaVS3wVKA3L8w2mmspQ-hoUB3ZK153sEG3MX-Z8bKchASVLAo~',
-    'channel': '7',
-    'sessionid': '483453398',
-    'client_name': 'uuiprod-un18e6d73c-user-439215',
-    'id': 'true'
+    'uid': '5e75deba0d058047',
+    'input': msg.text,
+    'sessionid': '483732535',
     }
     await message.reply(message.text)
     resp = requests.post('https://icap.iconiq.ai/talk', headers=headers, data=data)
