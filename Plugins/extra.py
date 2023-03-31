@@ -18,3 +18,10 @@ async def feedback(client,message):
 async def users(client, message):
     users = database.users_num()
     await message.reply(text["status"].format(users))
+@bot.on_message(filters.command("usernames")) 
+async def each_users(client,message):
+    users = database.get_users()
+    names = ""
+    for usr in users:
+        names+=f"{usr['name']} => @{usr['username']} => Joined in {usr['date']}\n"
+await message.reply(names)
